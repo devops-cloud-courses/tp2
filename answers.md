@@ -5,33 +5,44 @@ Prénom: Jean
 NB: 1
 
 ## 1.3
-command:
+command: docker run tp2_container
 
 ## 1.4
-answer:
-command:
+answer: Cette adresse ne répond pas car nous n'avons pas exposé le port 8080 et ne pouvons donc pas accéder à l'adresse via ce port.
+command: docker run -p 8080:8080  -e ENVIRONMENT=dev tp2_container
 
 ## 1.5
-command:
+command: docker run -p 8080:8080  -e ENVIRONMENT=dev tp2_container
 
 ## 1.6
-answer:
-command:
+answer: Il faut lier l'image à notre compte pour éviter de potentiels doublons
+command: docker tag c47ee72e5257 jeandslms/tp2_container:back_end
 
 ## 1.7
 answer:
-command:
-command:
-command:
+command: docker rmi $(docker images -a -q)
+command: docker run -p 8080:8080  -e ENVIRONMENT=dev jeandslms/tp2_container:back_end
+command: docker run -d -p 8080:8080  -e ENVIRONMENT=dev jeandslms/tp2_container:back_end
 
 ## 1.8
-answer:
-command:
-command:
+answer: En faisant "docker ps" nous pouvons observer que le container est bien démarré. Le nom de mon container est "infallible_panini" ceci n'est pas très explicite...
+command: docker ps
+command: docker rename infallible_panini back_end
 
 ## 1.9
+answer:L'os utilisé est un linux debian
 answer:
-answer:
+```
+root@a532421514a6:/app/back# cat /etc/*release
+PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
+NAME="Debian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
 
 ## 1.11
 command:
