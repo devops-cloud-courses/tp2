@@ -15,8 +15,10 @@ command: docker run -p 8080:8080 python_image
 command: docker run -p 8080:8080 -e ENVIRONMENT=back python_image
 
 ## 1.6
-answer:
-command: 
+answer: L'image ne peut pas être envoyée telle qu'elle est car elle n'est pas trouvée localement. Il faut que son nom corresponde au nom du repo docker hub.
+command: docker login
+         docker tag python_image avalais/tp2
+         docker push avalais/tp2
 
 ## 1.7
 answer:
