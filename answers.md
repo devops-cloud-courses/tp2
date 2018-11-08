@@ -8,11 +8,11 @@ NB: 1
 command: docker run python_image
 
 ## 1.4
-answer: On ne peut pas accéder à l'URL car le port 8080 est fermé. On doit préciser sur quel port on veut écouter et le nom de l'environnement.
-command: docker run -p 8080:8080 -e ENVIRONMENT=back python_image
+answer: On ne peut pas accéder à l'URL car le port 8080 est fermé. On doit préciser sur quel port on veut écouter.
+command: docker run -p 8080:8080 python_image
 
 ## 1.5
-command: 
+command: docker run -p 8080:8080 -e ENVIRONMENT=back python_image
 
 ## 1.6
 answer:
