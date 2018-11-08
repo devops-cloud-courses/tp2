@@ -6,13 +6,14 @@ NB: 7
 
 ## 1.3
 command: 
-
+docker build -t my-python-app .
+docker run -it --rm --name my-running-app my-python-app
 ## 1.4
 answer:
-command: 
+command: docker run -it -e ENVIRONMENT='dev' --rm --name my-running-app -p 8080:8080 my-python-app
 
 ## 1.5
-command: 
+command: command: docker run -it -e ENVIRONMENT='dev' --rm --name my-running-app -p 8080:8080 my-python-app
 
 ## 1.6
 answer:
