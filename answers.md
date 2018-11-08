@@ -5,7 +5,7 @@ Prénom: Alexia
 NB: 1
 
 ## 1.3
-command: 
+command: docker run python_image
 
 ## 1.4
 answer:
