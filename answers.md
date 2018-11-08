@@ -45,12 +45,19 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
 ## 1.11
-command:
-answer:
-
+command: docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 jeandslms/front_container:front
+answer: Pour trouver l'adresse de WS_BACK_URL il faut faire un ifconfig, on trouve alors l'adresse ip du container.
+Contenu :
+"
+You called at : 2018-11-08 21:24:14.369606 (dynamic)
+On environment : dev (from env variable)
+With path : coucou   (from URL path)
+With front : 330e3fde2377 (from real hostname of front service)
+With back  : d6abf7effd9b (from real hostname of back service)
+"
 
 ## 2.1
-command:
+command: docker-compose up
 
 ## 2.6
 command:
