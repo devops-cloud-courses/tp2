@@ -15,16 +15,16 @@ command: docker run -p 8080:8080 python_image
 command: docker run -p 8080:8080 -e ENVIRONMENT=back python_image
 
 ## 1.6
-answer: L'image ne peut pas être envoyée telle qu'elle est car elle n'est pas trouvée localement. Il faut que son nom corresponde au nom du repo docker hub.
+answer: L'image ne peut pas être envoyée telle qu'elle est car elle n'est pas trouvée localement. Il faut que son tag corresponde au nom du repo docker hub.
 command: docker login
          docker tag python_image avalais/tp2
          docker push avalais/tp2
 
 ## 1.7
-answer:
-command: 
-command: 
-command: 
+answer: Lorsque l'on run l'image, elle est d'abord cherchée localement. Comme elle n'est pas trouvée, on la télécharge à partir du repo docker.
+command: docker rmi $(docker images -a -q) => on récupère les ids de toutes les images
+command: docker run -p 8080:8080 -e ENVIRONMENT=back avalais/tp2
+command: docker run -d -p 8080:8080 -e ENVIRONMENT=back avalais/tp2
 
 ## 1.8
 answer:
