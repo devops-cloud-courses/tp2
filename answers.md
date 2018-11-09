@@ -19,7 +19,7 @@ answer: Il faut lier l'image à notre compte pour éviter de potentiels doublons
 command: docker tag c47ee72e5257 jeandslms/tp2_container:back_end
 
 ## 1.7
-answer:
+answer: L'image n'étant pas présente en local, docker va la récupérer sur docker hub afin de pouvoir runner l'image
 command: docker rmi $(docker images -a -q)
 command: docker run -p 8080:8080  -e ENVIRONMENT=dev jeandslms/tp2_container:back_end
 command: docker run -d -p 8080:8080  -e ENVIRONMENT=dev jeandslms/tp2_container:back_end
@@ -60,5 +60,5 @@ With back  : d6abf7effd9b (from real hostname of back service)
 command: docker-compose up
 
 ## 2.6
-command:
-command:
+command: docker-compose up -d
+command: docker-compose logs (-f for follow)
