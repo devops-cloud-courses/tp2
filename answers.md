@@ -27,9 +27,9 @@ command: docker run -p 8080:8080 -e ENVIRONMENT=back avalais/tp2
 command: docker run -d -p 8080:8080 -e ENVIRONMENT=back avalais/tp2
 
 ## 1.8
-answer:
-command: 
-command: 
+answer: On peut voir si le container est bien lancé et ses détails en faisant la commande docker ps. Le nom de mon container est vigilant_lalande.
+command: docker ps
+command: docker rename vigilant_lalande tp2_container
 
 ## 1.9
 answer:
