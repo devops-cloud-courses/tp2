@@ -32,8 +32,16 @@ command: docker ps
 command: docker rename 26f620eee85b tp2back
 
 ## 1.9
-answer:
-answer:
+answer: Debian 9 (stretch)
+answer: PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
+NAME="Debian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
 
 ## 1.11
 command: 
