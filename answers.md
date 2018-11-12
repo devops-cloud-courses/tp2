@@ -9,8 +9,8 @@ command: docker build -t tp2front ./
 docker run tp2front  
 
 ## 1.4
-answer:
-command: 
+answer: Les ports TCP ne sont pas ouverts 
+command: docker run -p 8080:8080 tp2front
 
 ## 1.5
 command: 
