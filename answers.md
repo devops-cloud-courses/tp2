@@ -27,9 +27,9 @@ command: docker run -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2front
 command: docker run -d -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2front
 
 ## 1.8
-answer:
-command: 
-command: 
+answer: nom de mon container est elastic_golick
+command: docker ps  
+command: docker rename 557aa82f50ff tp2front
 
 ## 1.9
 answer:
