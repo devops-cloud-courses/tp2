@@ -5,7 +5,8 @@ Prénom: Clément
 NB: 4
 
 ## 1.3
-command: 
+command: docker build -t tp2front ./ 
+docker run tp2front  
 
 ## 1.4
 answer:
