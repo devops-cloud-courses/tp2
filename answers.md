@@ -13,7 +13,7 @@ answer: Les ports TCP ne sont pas ouverts
 command: docker run -p 8080:8080 tp2front
 
 ## 1.5
-command: 
+command: docker run -p 8080:8080 -e ENVIRONMENT=dev tp2front
 
 ## 1.6
 answer:
