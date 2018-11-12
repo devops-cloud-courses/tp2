@@ -44,8 +44,10 @@ command: You called at : 2018-11-08 13:50:39.092742 (dynamic)
         With path : bonjour   (from URL path)
         With front : 8b1f466d4822 (from real hostname of front service)
         With back  : a55d101a7459 (from real hostname of back service
-answer: docker run -it --rm --name my-running-app -p 8081:8081/tcp -p 8081:8081/udp -e APP_PORT=8081 -e WS_BACK_URL=0.0.0.0 my-python-app
+answer: docker run -it --rm --name my-running-app -p 8081:8081/tcp -p 8081:8081/udp -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 my-python-app
 
+## 1.11 bis
+command: docker exec -it 42790a6aa754 cat logs/my-messages.log
 
 ## 2.1
 command:
