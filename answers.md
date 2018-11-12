@@ -21,10 +21,10 @@ command: docker tag tp2front clementgaidier/tp2front
 docker push clementgaidier/tp2front
 
 ## 1.7
-answer:
-command: 
-command: 
-command: 
+answer: 
+command: docker rmi -f $(docker images -a -q) 
+command: docker run -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2front
+command: docker run -d -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2front
 
 ## 1.8
 answer:
