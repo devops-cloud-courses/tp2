@@ -1,0 +1,21 @@
+version: '3'
+services:
+  service-back:
+    image: hrvly/back
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    environment:
+      - ENVIRONMENT=python:3-alpine
+    links:
+      - service-front
+  service-front:
+    ports:
+      - "8081:8081"
+    image: hrvly/front
+    environment:
+      - APP_PORT=8081
+      - WS_BACK_URL=172.17.0.1
+volumes:
+  app-conf:/var/www/html/upload
