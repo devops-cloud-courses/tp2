@@ -14,3 +14,5 @@ services:
     environment:
       - APP_PORT=8081
       - WS_BACK_URL=172.17.0.1
+    links:
+      - "back_service:back_end"

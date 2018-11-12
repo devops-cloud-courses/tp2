@@ -62,3 +62,6 @@ command: docker-compose up
 ## 2.6
 command: docker-compose up -d
 command: docker-compose logs (-f for follow)
+
+##2.9
+command:
