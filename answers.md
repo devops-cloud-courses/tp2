@@ -17,7 +17,7 @@ command: docker run -p 8080:8080 -e ENVIRONMENT=dev tp2back
 
 ## 1.6
 answer: L'image n'a pas de tag donc il faut associer un tag à l'image
-command: docker tag tp2front clementgaidier/tp2back 
+command: docker tag tp2back clementgaidier/tp2back 
 docker push clementgaidier/tp2back
 
 ## 1.7
@@ -27,9 +27,9 @@ command: docker run -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2back
 command: docker run -d -p 8080:8080 -e ENVIRONMENT=dev clementgaidier/tp2back
 
 ## 1.8
-answer: nom de mon container est elastic_golick
+answer: nom de mon container est mystifying_cohen
 command: docker ps  
-command: docker rename 557aa82f50ff tp2back
+command: docker rename 26f620eee85b tp2back
 
 ## 1.9
 answer:
