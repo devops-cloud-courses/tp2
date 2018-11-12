@@ -5,27 +5,28 @@ Prénom: Hervé
 NB: 2
 
 ## 1.3
-command: docker run -it --rm --name my-running-app tp2
+command:  docker build -t hrvly/back .
+          docker run -it --rm --name my-running-app hrvly/back
 
 ## 1.4
 answer: la connection au port n'est pas autorisée
-command: docker run -it --rm --name my-running-app tp2
-docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp my-python-app
+command: docker run -it --rm --name my-running-app hrvly/back
+docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp hrvly/back
 
 ## 1.5
-command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine tp2
+command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine hrvly/back
 
 ## 1.6
 answer: le nom de l'image doit correspondre à celui du repository
 command: docker login (login dans docker hub)
          docker images (pour trouver l'id de mon image)
-         docker tag 7e16e8a015e5 hrvly/tp2 (tag mon appli docker vers son id docker hub)
-         docker push hrvly/tp2 (push mon appli vers docker hub)
+         docker tag 7e16e8a015e5 hrvly/back (tag mon appli docker vers son id docker hub)
+         docker push hrvly/back (push mon appli vers docker hub)
 ## 1.7
 answer: l'image est introuvable localement, docker va donc le télécharger avant de le lancer
 command: sudo docker rmi -f $(docker images -q)
-command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine hrvly/tp2
-command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine -d hrvly/tp2
+command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine hrvly/back
+command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine -d hrvly/back
 
 ## 1.8
 answer: nom de mon container: my-running-app, id: c5948d1876e0
