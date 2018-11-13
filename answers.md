@@ -52,7 +52,7 @@ answer: You called at : 2018-11-13 14:32:08.315980 (dynamic)
         With back  : 59e6de57fb02 (from real hostname of back service)
 
 ## 2.1
-command: 
+command: docker-compose up
 
 ## 2.6
 command: 
