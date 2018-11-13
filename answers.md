@@ -44,8 +44,12 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 ## 1.11
-command: 
-answer:
+command: docker run -d -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 clementgaidier/tp2front
+answer: You called at : 2018-11-13 14:32:08.315980 (dynamic)
+        On environment : dev (from env variable)
+        With path : write   (from URL path)
+        With front : 8f0ff760d00d (from real hostname of front service)
+        With back  : 59e6de57fb02 (from real hostname of back service)
 
 ## 2.1
 command: 
