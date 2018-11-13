@@ -55,7 +55,7 @@ answer: You called at : 2018-11-13 14:32:08.315980 (dynamic)
 command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs
 
 
