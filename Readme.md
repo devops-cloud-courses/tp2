@@ -205,9 +205,23 @@ Relancer l'ensemble des services en mode détaché. Ecrire la commande utilisée
 
 Visualiser les logs des différents services en même temps. Ecrire la commande utilisée dans le fichier answers.md
 
-### 2.7
+### 2.7 : Persistence
 Les services sont maintenant lancés correctement via docker-compose. Cependant, à chaque redémarrage, les données sont flushée.
 
+Modifier le docker-compose.yml pour ajouter un montage de volume afin de persister les données sur le disque entre les redémarrages.
+
+> Attention: Après cette étape, commenter les lignes relatives au montage de volume dans le docker-compose.yml
+
+### 2.8 : Upgrade
+A tout moment, lorsque vous avez lancé vos services en mode detaché, vous pouvez recharger une nouvelle version en exécutant la ligne ci-dessous à nouveau:
+```bash
+docker-compose up -d
+```
+
+### 2.9 : Scaling de l'espace
+Les services doivent être démarrés en mode détaché. Essayer de scaler le webservice back en doublant le nombre de container back démarrés. Ecrire la commande utilisée dans le fichier answers.md
+
+Vérifier que les hostnames changent dans la UI.
 
 
 ## 3 : Kubernetes
