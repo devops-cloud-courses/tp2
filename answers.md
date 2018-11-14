@@ -49,10 +49,10 @@ answer:pour le back, ce qui change est :   "result": "path_test"
        pour le front, ce qui change est :   With path : path_test   (from URL path)
 
 ## 2.1
-command: 
+command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs -f
 
 

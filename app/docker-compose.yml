@@ -1,0 +1,15 @@
+version: '3'
+services:
+  back:
+    image: a99d471b3ab1
+    ports:
+      - "8080:8080"
+    environment:
+      - ENVIRONMENT=dev 
+  front:
+    image: a38dcb68fd6e 
+    ports: 
+      - "8081:8081"
+    environment:
+      - APP_PORT=8081
+      - WS_BACK_URL=172.17.0.1 
