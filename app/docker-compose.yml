@@ -1,0 +1,16 @@
+version: '3'
+services:
+        tp2back:
+                image: e58e15377c01
+                environment:
+                        - ENVIRONMENT=dev
+                ports:
+                        - "8080:8080"
+        tp2front:
+                image: 07bbd1ad2a05
+                ports:
+                        - "8081:8081"
+                environment:
+                        - APP_PORT=8081
+                        - WS_BACK_URL=172.17.0.1
+

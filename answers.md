@@ -35,7 +35,7 @@ command: docker ps
 command: docker rename relaxed_turing detached_tp2back
 
 ## 1.9
-Pour lancer l'interface et afficher les informations sur l'OS :
+Pour ouvrir une session interactive et afficher les informations sur l'OS :
 docker exec -i detached_tp2back bash
 cat /etc/*release
 answer: l'OS utilisé est Debian GNU/Linux 9 (stretch).
@@ -51,14 +51,21 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 ## 1.11
-command: 
+command: docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 ongphil/tp2front
+answer:
+http://localhost:8081/philippe
+You called at : 2018-11-09 13:39:23.380670 (dynamic)
+        On environment : dev (from env variable)s
+        With path : philippe   (from URL path)
+        With front : 4615afcaacdf (from real hostname of front service)
+        With back  : abe9cad70252 (from real hostname of back service)
 
 ## 2.1
-command: 
+command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs
 
 ## 2.9
 command: 
