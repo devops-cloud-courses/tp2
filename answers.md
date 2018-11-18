@@ -64,4 +64,4 @@ command: docker-compose up -d
 command: docker-compose logs (-f for follow)
 
 ##2.9
-command:
+command: docker-compose up --scale back_service=2 

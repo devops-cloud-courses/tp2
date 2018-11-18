@@ -2,10 +2,10 @@ version: '3'
 services:
   back_service:
     image: jeandslms/tp2_container:back_end
-    ports:
-      - "8080:8080"
     environment:
       - ENVIRONMENT=dev
+#    volumes:
+#      - data-volume:/var/lib/back_end
 
   front_service:
     image: jeandslms/front_container:front
@@ -13,6 +13,11 @@ services:
       - "8081:8081"
     environment:
       - APP_PORT=8081
-      - WS_BACK_URL=172.17.0.1
+      - WS_BACK_URL=back_end
     links:
       - "back_service:back_end"
+#    volumes:
+#      - data-volume:/var/lib/front
+
+#volumes:
+#  data-volume:
