@@ -54,11 +54,11 @@ answer: You called at : 2018-11-11 22:03:42.533379 (dynamic)
 command: docker exec -it [back_container_id] bash
 
 ## 2.1
-command:
+command: docker-compose up
 
 ## 2.6
-command:
-command:
+command: docker-compose up -d
+command: docker-compose logs
 
 ## 2.9
 command:
