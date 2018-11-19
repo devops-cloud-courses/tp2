@@ -59,4 +59,4 @@ command: docker-compose up -d
 command: docker-compose logs
 
 ## 2.9
-command:
+command: docker-compose up -d --scale services-back=2
