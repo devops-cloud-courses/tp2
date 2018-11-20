@@ -57,4 +57,6 @@ command: docker-compose up
 command: docker-compose up -d 
 command: docker-compose logs
 
+## 2.9
+command : docker-compose up -d —scale launchBack=2
 
