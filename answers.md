@@ -44,14 +44,16 @@ answer: PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
 	BUG_REPORT_URL="https://bugs.debian.org/"
 
 ## 1.11
-command: docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -d tp2front
+command: sudo docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -d fronttp2
 answer: http://localhost:8081/theophile (With path : theophile)
 
 ## 2.1
 command: sudo docker-compose run -p 8080:8080 -e ENVIRONMENT=dev service-back
 
 ## 2.6
-command: 
-command: 
+command: sudo docker-compose up
+command: sudo docker-compose logs
 
+## 2.9
+command: sudo docker-compose up -d --scale backtp2=2
 

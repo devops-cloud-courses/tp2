@@ -19,7 +19,8 @@ answer: elle ne peut pas être push car il lui faut un tag
 command: sudo docker tag b56321cc8ffc kingsun21/tp2
 
 ## 1.7
-answer: il faut mettre sudo docker run kingsun21/tp2 au lieu de juste tp2
+answer: il faut mettre sudo docker run kingsun21/tp2 au lieu de juste tp2, car
+	le dépôt n'existe plus localement, mais seulement sur le hub
 command: sudo docker rmi -f $(docker images -q)
 command: sudo docker run -p 8080:8080 -e ENVIRONMENT=dev kingsun21/tp2
 command: sudo docker run -p 8080:8080 -e ENVIRONMENT=dev -d kingsun21/tp2
@@ -43,14 +44,16 @@ answer: PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
 	BUG_REPORT_URL="https://bugs.debian.org/"
 
 ## 1.11
-command: 
-answer:
+command: sudo docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -d tp2front
+answer: http://localhost:8081/theophile (With path : theophile)
 
 ## 2.1
-command: 
+command: sudo docker-compose run -p 8080:8080 -e ENVIRONMENT=dev service-back
 
 ## 2.6
-command: 
-command: 
+command: sudo docker-compose up
+command: sudo docker-compose logs
 
+## 2.9
+command: sudo docker-compose up -d --scale backtp2=2
 
