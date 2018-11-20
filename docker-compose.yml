@@ -1,0 +1,24 @@
+version: '3'
+services:
+  service_back: 
+    environment:
+     - ENVIRONMENT=back
+    image: avalais/tp2
+#    volumes: 
+#     - data-volume:/var/lib/back
+
+  service_front:
+    ports:
+     - "8081:8081"
+    environment:
+     - APP_PORT=8081
+     - WS_BACK_URL=back
+    image: avalais/tp2_front
+    links:
+     - "service_back:back"
+#    volumes:
+#     - data-volume:/var/lib/front
+
+#volumes:
+#  data-volume:
+
