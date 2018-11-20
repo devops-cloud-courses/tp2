@@ -51,7 +51,8 @@ answer: With path : alexia   (from URL path)
 command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs
 
-
+## 2.9
+command: docker-compose up --scale service_back=2
