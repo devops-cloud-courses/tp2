@@ -48,10 +48,11 @@ command: docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -d  
 answer: With path : alexia   (from URL path)
 
 ## 2.1
-command: 
+command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs
 
-
+## 2.9
+command: docker-compose up --scale service_back=2
