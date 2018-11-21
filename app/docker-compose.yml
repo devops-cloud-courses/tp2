@@ -1,0 +1,20 @@
+version: '3'
+services:
+        tp2back:
+                image: ongphil/tp2back
+                environment:
+                        - ENVIRONMENT=dev
+                #volumes:
+                        #- logs
+        tp2front:
+                image: ongphil/tp2front
+                ports:
+                        - "8081:8081"
+                environment:
+                        - APP_PORT=8081
+                        - WS_BACK_URL=back
+                links:
+                        - "tp2back:back"
+                
+#volumes:
+        #logs:
