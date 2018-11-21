@@ -1,3 +1,4 @@
+
 import os
 from aiohttp import web
 from datetime import datetime
@@ -19,7 +20,7 @@ async def handle(request):
         With front : {os.uname()[1]} (from real hostname of front service)
         With back  : {json_data['hostname']} (from real hostname of back service)
         """
-    
+
     return web.Response(text=resp)
 
 async def write_to_file(request):

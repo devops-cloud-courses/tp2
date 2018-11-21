@@ -1,0 +1,15 @@
+version: '3'
+services:
+  back-service:
+    environment:
+      - ENVIRONMENT=dev
+    image: cpiovesan/tp2back
+  front-service:
+    ports:
+      - "8081:8081"
+    environment:
+      - APP_PORT=8081
+      - WS_BACK_URL=backend
+    image: cpiovesan/tp2front
+    links:
+      - "back-service:backend"
