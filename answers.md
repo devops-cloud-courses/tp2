@@ -13,7 +13,7 @@ answer: L'addresse ne répond car nous avons pas autorisé la connection au port
 command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp my-python-app
 
 ## 1.5
-command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=python:3-alpine my-python-app
+command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080/udp -e ENVIRONMENT=dev my-python-app
 
 ## 1.6
 answer: Il faut changer le nom de son appli et le remplacer par le nom de son dépot Docker Hub (cpiovesan/tp2 dans mon cas)
@@ -61,4 +61,4 @@ command: docker-compose up -d
 command: docker-compose logs
 
 ## 2.9:
-command:
+command: docker-compose up --scale back-service=2
