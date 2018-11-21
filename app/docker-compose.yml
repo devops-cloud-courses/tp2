@@ -1,0 +1,15 @@
+version: '2'
+services:
+  back-service:
+    ports:
+      - "8080:8080"
+    environment:
+      - ENVIRONMENT=python:3-alpine
+    image: hadtex/dockert2pece
+  front-service:
+    ports:
+      - "8081:8081"
+    environment:
+      - APP_PORT=8081
+      - WS_BACK_URL=172.17.0.1
+    image: hadtex/fronttp2

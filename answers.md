@@ -5,7 +5,8 @@ Prénom: Hadrien
 NB: 2
 
 ## 1.3
-command: docker run -it --rm --name my-running-app my-python-app
+command: docker build -t  my-python-app ./
+docker run -it --rm --name my-running-app my-python-app
 
 ## 1.4
 answer: Les ports ne sont pas ouverts
@@ -17,7 +18,7 @@ command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080
 
 ## 1.6
 answer: Le nom de l'image ne correspond au repo il faut donc faire un docker tag
-command:docker tag 408808fb1a9e docker.com/hadtex/dockert2pece
+command:docker tag 408808fb1a9e hadtex/dockert2pece
 docker push hadtex/dockert2pece
 
 
@@ -30,8 +31,7 @@ command: docker run -it --rm --name my-running-app -p 8080:8080/tcp -p 8080:8080
 ## 1.8
 answer: my-ruining-app et id ebcf709953f5
 command: docker ps
-command: docker restart ebcf709953f5
-docker rename ebcf709953f5 sens
+command: docker rename ebcf709953f5 sens
 
 
 ## 1.9
@@ -50,14 +50,12 @@ answer: docker run -it --rm --name my-running-app -p 8081:8081/tcp -p 8081:8081/
 command: docker exec -it 42790a6aa754 cat logs/my-messages.log
 
 ## 2.1
-command:
+command: docker-compose up
 
 ## 2.6
-command:
-command:
+command: docker-compose up -d
+command: docker-compose logs
 
-command:
-command:
 
 ## 2.9
 command:
