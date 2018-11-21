@@ -21,7 +21,7 @@ answer: il fallait rajouter le tag
 command: docker push alexandretrb/my-python-app
 
 ## 1.7
-answer: docker system prune -f
+answer: docker rmi -f 48c172c969dc
 command: docker run -p 8080:8080 -e ENVIRONMENT=dev alexandretrb/back
 command: docker run -p 8080:8080 -e ENVIRONMENT=dev -d alexandretrb/back (pour lancer en mode détaché le container)
 
@@ -44,8 +44,9 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 ## 1.11
-command: 
-answer:
+command: docker run -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -p 8081:8081 alexandretrb/front
+answer:  http://0.0.0.0:8081/aaa  ==>>  With path : aaa   (from URL path)
+		 http://0.0.0.0:8081/write/testwritelog
 
 ## 2.1
 command: 
