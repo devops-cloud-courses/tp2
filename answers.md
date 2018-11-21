@@ -5,33 +5,43 @@ Prénom: Alexandre
 NB: 7
 
 ## 1.3
-command: 
+command: docker run 092db6b799e9
+(docker build .  
+avec un cd tp2/app/back)
 
 ## 1.4
-answer:
-command: 
+answer: Probleme de variable d'environnement 
+command: docker run -it --rm --name my-running-app -p 8080:8080 my-python-app
 
 ## 1.5
-command: 
+command: docker run -it -e ENVIRONMENT='dev' --rm --name my-running-app -p 8080:8080 my-python-app
 
 ## 1.6
-answer:
-command: 
+answer: il fallait rajouter le tag
+command: docker push alexandretrb/my-python-app
 
 ## 1.7
-answer:
-command: 
-command: 
-command: 
+answer: docker system prune -f
+command: docker run -p 8080:8080 -e ENVIRONMENT=dev alexandretrb/back
+command: docker run -p 8080:8080 -e ENVIRONMENT=dev -d alexandretrb/back (pour lancer en mode détaché le container)
 
 ## 1.8
-answer:
-command: 
-command: 
+answer: docker ps   
+command: nom du container : adoring_bartik
+command: docker rename adoring_bartik nomquiadusens
 
 ## 1.9
-answer:
-answer:
+answer: docker exec -it 9e9263e66d0e bash
+answer: 
+PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
+NAME="Debian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
 
 ## 1.11
 command: 
