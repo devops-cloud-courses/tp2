@@ -22,7 +22,7 @@ docker push brahimakh/tp2
 
 ## 1.8
 answer: 
-command: docker run docker run -p 8080:8080 -e ENVIRONMENT=dev -d tp2
+command: docker run -p 8080:8080 -e ENVIRONMENT=dev -d tp2
 command: docker ps
 command: docker rename ID_d_image nouveau_nom 
 
@@ -50,7 +50,7 @@ You called at : 2018-11-09 14:09:26.522452 (dynamic)
         With path : brahim   (from URL path)
         With front : 89db88ca94d4 (from real hostname of front service)
         With back  : ccfacc578f6c (from real hostname of back service)
-docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1:8081 tp2
+docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 tp2
 
 
 ## 2.1
@@ -62,4 +62,4 @@ command: docker-compose up -d
 command: docker-compose logs
 
 ## 2.9
-command:
+command:docker-compose up -d --scale tp2=2
