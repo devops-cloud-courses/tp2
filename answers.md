@@ -6,7 +6,7 @@ NB: 5
 
 ## 1.3
 command: docker build -t tp2 back
-command 2: docker run tp2 back
+command: docker run tp2 
 
 ## 1.4
 answer: Nous n'avons ouvert aucun port 8080 pour accéder à l'image Docker.
@@ -44,13 +44,20 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 ## 1.11
-command: 
+command: docker run -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 -d rochfolly/tp2front
+url: http://localhost:8081/roch
+sortie: You called at : 2018-11-26 14:48:05.292152 (dynamic)
+        On environment : dev (from env variable)
+        With path : roch   (from URL path)
+        With front : 4986f7af069d (from real hostname of front service)
+        With back  : c354fa1ccd0a (from real hostname of back service)
+
 
 ## 2.1
-command: 
+command: docker-compose up
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d
+command: docker-compose logs
 
 
