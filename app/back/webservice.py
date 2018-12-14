@@ -19,6 +19,7 @@ async def write_to_file(request):
     if something:
         with open('logs/my-messages.log', 'a') as the_file:
             the_file.write(f"{something}\n")
+        
     else:
         return web.Response(status=500)
 

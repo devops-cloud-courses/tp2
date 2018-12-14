@@ -1,0 +1,22 @@
+version: '3'
+services:
+  back:
+    image: tolsk/micro-services-classes
+    environment:
+      - ENVIRONMENT=3-alpine
+#   volumes:
+#     - data-volume:/var/lib/back
+  front:
+    image: tolsk/micro-services-classes-front
+    ports:
+      - "8081:8081"
+    environment:
+      - APP_PORT=8081
+      - WS_BACK_URL=backend
+    links:
+      - "back:backend"
+#    volumes:
+#     - data-volume:/var/lib/front
+    
+#volumes: 
+#   data-volume:
