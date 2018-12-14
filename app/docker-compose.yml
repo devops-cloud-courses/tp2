@@ -1,0 +1,25 @@
+version: '3'
+services:
+        service-back:
+                image: 1354c1ef075e
+                environment:
+                        - ENVIRONMENT=dev
+                #volumes:
+                        #- logs
+        service-front:
+                image: 885e244446d5 
+                ports:
+                        - "8081:8081"
+                environment:
+                        - APP_PORT=8081
+                        - WS_BACK_URL=back
+                links:
+                        - "service-back:back"
+#volumes:
+        #logs:
+
+
+
+
+
+
