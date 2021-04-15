@@ -1,0 +1,18 @@
+version: '3'
+services:
+  back_service:
+    image: admar/tp2_container:back_end
+    environment:
+      - ENVIRONMENT=dev
+#    volumes:
+#      - data-volume:/var/lib/back_end
+
+  front_service:
+    image: admar/front_container:front
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_PORT=8080
+      - WS_BACK_URL=back_end
+    links:
+      - "back_service:back_end"
