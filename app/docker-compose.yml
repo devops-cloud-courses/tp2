@@ -1,0 +1,17 @@
+version: '3'
+services:
+    tp2back:
+      image: rochfolly/tp2
+      environment:
+        - ENVIRONMENT=dev
+
+    tp2front:
+      image: rochfolly/tp2front
+      ports:
+        - "8081:8081"
+      environment:
+        - APP_PORT=8081
+        - WS_BACK_URL=back
+      links:
+        - "tp2back:back"
+
